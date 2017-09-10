@@ -1,0 +1,645 @@
+@import "variable";
+
+
+
+.section1 {
+  background: url("../image/timg1.jpg") no-repeat;
+}
+.section2 {
+  background: url("../image/timg.jpg") no-repeat;
+}
+
+
+
+
+
+
+//侧边导航颜色
+#fp-nav>ul>li>.fp-tooltip {
+  color: @defaultColor !important;
+}
+.navbar {
+  padding: 20px 0;
+  .navbar-brand {
+    font-weight: bold;
+    color: @fontColor !important;
+    &:hover {
+      color: @defaultColor !important;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: @fontColor;
+        font-size: 14px;
+        &:hover {
+          color: #ecc93d;
+        }
+        &:focus {
+          color: #ecc93d;
+        }
+      }
+    }
+  }
+  #menu .active a { color: #fff; background-color: #333;}
+}
+.navbar-default {
+  background-color: rgba(0,0,0,0.2);
+  border: none;
+  color: @fontColor;
+}
+.header {
+  //第一页
+  .myResume-warp{
+    @media (min-width: 768px) {
+      letter-spacing: 35px;
+      opacity: 0;
+      .myResume {
+        font-size: 70px;
+        color: @fontColor;
+        font-weight: 700;
+        margin-top: 100px;
+      }
+      .intro-text {
+        font-size: 20px;
+      }
+    }
+    .myResume {
+      color: @fontColor;
+    }
+    .fontColor {
+      color: @defaultColor;
+    }
+    .intro-text {
+      color: @fontColor;
+      font-size: 20px;
+    }
+  }
+  .font-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0px auto 0;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    opacity: 0;
+    &:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    .font-icon-wrap {
+      display: block;
+      padding: 20px;
+      &:hover {
+        .font-icon-down {
+          -webkit-animation: iconDown .5s linear infinite alternate;
+          -o-animation: iconDown .5s linear infinite alternate;
+          animation: iconDown .5s linear infinite alternate;
+        }
+      }
+      .font-icon-down {
+        color: @defaultColor;
+        display: block;
+        font-size: 22px;
+        margin-top: -7px;
+
+      }
+    }
+  }
+}
+//第一页动画
+.first.current .myResume-warp{
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  letter-spacing: 8px;
+  opacity: 1;
+}
+.first.current .font-icon {
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  margin-top: 200px;
+  opacity: 1;
+}
+@keyframes iconDown {
+  0% {
+    font-size: 22px;
+  }
+  25% {
+    font-size: 24px;
+  }
+  50% {
+    font-size: 26px;
+  }
+  100% {
+    font-size: 28px;
+  }
+}
+#dowebok {
+  //第二页
+  .section2 {
+    overflow: hidden;
+    .fp-tableCell {
+      display: block;
+      padding-top: 100px;
+      h2 {
+        color: @fontColor;
+        margin-bottom: 100px;
+        strong {
+          padding-left: 5px;
+        }
+      }
+      .text-center {
+        margin-top: -200px;
+        opacity: 0;
+      }
+      .basicInfo-warp {
+        margin-top: 150px;
+        .media {
+          overflow: visible;
+          margin-top: 15px;
+          .media-left {
+            padding-right: 15px;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            .myInfo {
+              color: #46ee32;
+            }
+            .myeducation {
+              color: #09ddee;
+            }
+            .myhobby {
+              color: #ee030b;
+            }
+            .myphone {
+              color: #eec100;
+            }
+            i {
+              font-size: 30px;
+            }
+          }
+          .media-body {
+            overflow: visible;
+            color: @fontColor;
+            font-weight: 400;
+            h3,p{
+              -webkit-transition: all 1s;
+              -moz-transition: all 1s;
+              -ms-transition: all 1s;
+              -o-transition: all 1s;
+              transition: all 1s;
+            }
+            .media-heading {
+              color: @defaultColor;
+            }
+            p {
+              font-size: 14px;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+//  第二页动画布局
+.myInfo-wrap {
+  .media-middle {
+      transform: translate(-40px,100px) rotate(45deg);
+  }
+  .media-body {
+    h3:nth-child(1) {  transform: translate(80px,18px) rotate(50deg);  }
+    p:nth-child(2) {  transform: translate(120px,168px) rotate(135deg);  }
+    p:nth-child(3) {  transform: translate(213px,241px) rotate(160deg);  }
+    p:nth-child(4) {  transform: translate(267px,231px) rotate(224deg);  }
+  }
+}
+  .myeducation-wrap {
+    .media-middle {
+      transform: translate(216px,180px) rotate(135deg);
+    }
+    .media-body {
+      h3:nth-child(1) {  transform: translate(164px,189px) rotate(134deg);  }
+      p:nth-child(2) {  transform: translate(189px,210px) rotate(75deg);  }
+      p:nth-child(3) {  transform: translate(314px,321px) rotate(216deg);  }
+      p:nth-child(4) {  transform: translate(345px,76px) rotate(216deg);  }
+    }
+  }
+  .myhobby-wrap {
+    .media-middle {
+      transform: translate(389px,100px) rotate(178deg);
+    }
+    .media-body {
+      h3:nth-child(1) {  transform: translate(368px,330px) rotate(189deg);  }
+      p:nth-child(2) {  transform: translate(523px,234px) rotate(127deg);  }
+      p:nth-child(3) {  transform: translate(428px,324px) rotate(45deg);  }
+      p:nth-child(4) {  transform: translate(389px,426px) rotate(289deg);  }
+    }
+  }
+  .myphone-wrap {
+    .media-middle {
+      transform: translate(298px,256px) rotate(110deg);
+    }
+    .media-body {
+      h3:nth-child(1) {  transform: translate(216px,168px) rotate(216deg);  }
+      p:nth-child(2) {  transform: translate(120px,168px) rotate(135deg);  }
+      p:nth-child(3) {  transform: translate(213px,241px) rotate(160deg);  }
+      p:nth-child(4) {  transform: translate(267px,231px) rotate(224deg);  }
+    }
+  }
+//  第二页动画
+  .two.current .text-center{
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    margin-top: 0;
+    opacity: 1;
+  }
+  .two.current .basicInfo-warp .media-middle,.two.current .basicInfo-warp .media-body p,.two.current .basicInfo-warp .media-body h3 {
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+    transform: none;
+  }
+//  第三页
+  .section3 {
+    overflow: hidden;
+    background: linear-gradient(#fff, #ebebeb, #d5d5d5);
+    .fp-tableCell {
+      display: block;
+      padding-top: 100px;
+      .container {
+        .projectExperience {
+          transform: translate3d(0,-200px,0);
+          opacity: 0;
+          h2 {
+            strong {
+              margin-left: 10px;
+            }
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+      .row {
+        margin-top: 50px;
+        .item-wrap {
+          .hover-text{
+            width: 100%;
+            height: 240px;
+            &:hover img {
+              width: 100%;
+              height: 100%;
+            }
+            &:hover .item-info {
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+              z-index: 0;
+              a,p,i {
+                transform: none;
+              }
+            }
+            img {
+              transition: all .5s;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .hover-text {
+            position: relative;
+            .item-info {
+              position: absolute;
+              overflow: hidden;
+              -webkit-transition: all .5s;
+              -moz-transition: all .5s;
+              -ms-transition: all .5s;
+              -o-transition: all .5s;
+              transition: all .5s;
+              width: 100%;
+              height: 100%;
+              padding: 25% 0;
+              background: rgba(0,0,0,0.5);
+              top: 0;
+              left: 0;
+              color: @fontColor;
+              opacity: 0;
+              z-index: -1;
+              a {
+                display: inline-block;
+                transition: all .5s;
+                transform: translateX(500px);
+                top: -50px;
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration: none;
+                color: @fontColor;
+                &:hover {
+                  color: @defaultColor;
+                }
+              }
+              p{
+                font-size: 16px;
+                transform: translateX(-500px);
+                margin: 10px 0;
+                transition: all .5s;
+              }
+              i {
+                font-size: 16px;
+                transform: translateY(200px);
+                color: @defaultColor;
+                transition: all .5s;
+              }
+            }
+          }
+        //  酒仙网样式
+          .jxw {
+            transform: translate3d(-500px,0,0) rotate(180deg);
+          }
+          .jd {
+            transform: translate3d(0,500px,0) rotate(180deg);
+          }
+          .eleme {
+            transform: translate3d(0,-1000px,0) rotate(180deg);
+          }
+          .dspt {
+            transform: translate3d(500px,0,0) rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  //  第三页动画
+  .section3.current .fp-tableCell .container{
+    .projectExperience {
+      transition: all 1s 2.5s;
+      opacity: 1;
+      transform: none;
+    }
+    .jxw,.dspt{
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s;
+      transform: none;
+    }
+    .jd {
+      -webkit-transition: all 1s 1s;
+      -moz-transition: all 1s 1s;
+      -ms-transition: all 1s 1s;
+      -o-transition: all 1s 1s;
+      transition: all 1s 1s;
+      transform: none;
+    }
+    .eleme {
+      -webkit-transition: all 1s 2s;
+      -moz-transition: all 1s 2s;
+      -ms-transition: all 1s 2s;
+      -o-transition: all 1s 2s;
+      transition: all 1s 2s;
+      transform: none;
+    }
+  }
+//  第四屏幕 专业技能
+  .section4 {
+    height: 100%;
+    overflow: hidden;
+    background: #f4d03f;
+    .fp-tableCell {
+      display: block;
+      padding-top: 80px;
+      .container {
+        .text-center {
+          transition: all 1s;
+          transform: translateY(-200px);
+          margin-bottom: 50px;
+          strong {
+            margin-right: 10px;
+          }
+        }
+        .about {
+          transition: all 1s;
+          transform: translateX(-800px);
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .skills {
+          i{
+            font-size: 24px;
+            color: #fff;
+          }
+          .media {
+            .media-body {
+              font-size: 14px;
+              padding: 0 0 30px;
+              h3 {
+                margin-bottom: 20px;
+              }
+            }
+          }
+          .pc,.phone,.qita {
+            transition: all 1s;
+            transform: translateX(800px);
+          }
+        }
+      }
+    }
+  }
+//  专业技能动画
+  .section4.current {
+    .fp-tableCell {
+      .container {
+        .text-center {
+          transition: all 1s 3.5s;
+          transform: none;
+        }
+        .about {
+          transition: all 1s;
+          transform: none;
+        }
+        .skills {
+          .pc {
+            transition: all 1s 1s;
+            transform: none;
+          }
+          .phone {
+            transition: all 1s 2s;
+            transform: none;
+          }
+          .qita {
+            transition: all 1s 3s;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+//  工作经验
+  .section5 {
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(#fff, #ebebeb, #d5d5d5);
+    .fp-tableCell {
+      display: block;
+      padding-top: 80px;
+      .work {
+        margin-bottom: 50px;
+        transition: all 1s;
+        transform: translate3d(-900px,0,0) rotate(180deg);
+        h2 {
+          strong {
+            margin-left: 10px;
+          }
+        }
+      }
+      .company-wrap {
+        img{
+          display: inline-block;
+          width: 150px;
+          height: 150px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          transition: all 1s;
+          transform: translate3d(-800px,0,0) rotate(180deg);
+        }
+        .company {
+          -webkit-transition: all 1s;
+          -moz-transition: all 1s;
+          -ms-transition: all 1s;
+          -o-transition: all 1s;
+          transition: all 1s;
+          margin-top: 20px;
+          transform: translate3d(-900px,0,0);
+          h4 {
+            padding-top: 10px;
+          }
+          p {
+            margin: 20px 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+//  工作经验动画
+  .section5.current .fp-tableCell{
+        .work {
+          transition: all 1s;
+          transform: none;
+        }
+    .company-wrap {
+      .company {
+        transition: all 1s 2.5s;
+        transform: none;
+      }
+      img {
+        -webkit-transition: all 2s 1s;
+        -moz-transition: all 2s 1s;
+        -ms-transition: all 2s 1s;
+        -o-transition: all 2s 1s;
+        transition: all 2s 1s;
+        transform: translate3d(0,0,0) rotate(360deg);
+      }
+    }
+  }
+//  自我评价
+  .section6 {
+    position: relative;
+    background: url("../image/flame_25.jpg") no-repeat fixed;
+    background-size: cover;
+    h2 {
+      margin-top: 100px;
+      color: #ffffff;
+      strong {
+        margin-left: 10px;
+      }
+    }
+      .slide {
+        .fp-tableCell {
+          padding: 0;
+          p{
+            margin-top: -200px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ebea11;
+          }
+        }
+      }
+    .bottom {
+      bottom: 150px;
+      span{
+        width: 10px;
+        height: 10px;
+        border: 1px solid #fff;
+      }
+      .active {
+       span {
+         background-color: @defaultColor;
+       }
+      }
+    }
+  }
+//  联系方式
+  .section7 {
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(#fff, #ebebeb, #d5d5d5);
+    .fp-tableCell {
+      display: block;
+      padding-top: 80px;
+      .container {
+        h2 {
+          margin-bottom: 150px;
+        }
+        .contact-info {
+          margin-bottom: 150px;
+          i {
+            font-size: 26px;
+            color: @defaultColor;
+            margin-bottom: 20px;
+          }
+          p{
+            font-size: 20px;
+            font-weight: 400;
+          }
+          img {
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+          }
+        }
+
+      }
+    }
+    .footer {
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+      padding: 20px;
+      color: @fontColor;
+      background-color: #222222;
+    }
+  }
+}
+
