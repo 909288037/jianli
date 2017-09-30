@@ -1,4 +1,4 @@
-$(function(){
+$(window).load(function () {
     $('#dowebok').fullpage({
         loopTop: true,
         loopBottom: true,
@@ -23,6 +23,8 @@ $(function(){
             },100);
         },
     });
+//    加载完成动画加载隐藏
+    $(".loading").hide();
 //    鼠标滚动顶部导航渐变
     $(window).on("scroll",function () {
         var sTop = $(document).scrollTop();

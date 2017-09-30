@@ -8557,7 +8557,7 @@ var
 	rurl = /^([\w.+-]+:)(?:\/\/(?:[^\/?#]*@|)([^\/?#:]*)(?::(\d+)|)|)/,
 
 	/* Prefilters
-	 * 1) They are useful to introduce custom dataTypes (see ajax/jsonp.js for an example)
+	 * 1) They are useful to introduce custom dataTypes (see Ajax/jsonp.js for an example)
 	 * 2) These are called:
 	 *    - BEFORE asking for a transport
 	 *    - AFTER param serialization (s.data is a string if s.processData is true)
@@ -8649,7 +8649,7 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 	return inspect( options.dataTypes[ 0 ] ) || !inspected[ "*" ] && inspect( "*" );
 }
 
-// A special extend for ajax options
+// A special extend for Ajax options
 // that takes "flat" options (not to be deep extended)
 // Fixes #9887
 function ajaxExtend( target, src ) {
@@ -8668,7 +8668,7 @@ function ajaxExtend( target, src ) {
 	return target;
 }
 
-/* Handles responses to an ajax request:
+/* Handles responses to an Ajax request:
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
@@ -9627,7 +9627,7 @@ if ( xhrSupported ) {
 
 					// Do send the request
 					// This may raise an exception which is actually
-					// handled in jQuery.ajax (so no try/catch here)
+					// handled in jQuery.Ajax (so no try/catch here)
 					xhr.send( ( options.hasContent && options.data ) || null );
 
 					// Listener
