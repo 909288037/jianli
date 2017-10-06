@@ -1,8 +1,8 @@
 .section1 {
-  background: url("../image/timg1.jpg") no-repeat;
+  background: url("../image/intro-bg.jpg") no-repeat;
 }
 .section2 {
-  background: url("../image/timg.jpg") no-repeat;
+  background: linear-gradient(#6c6f72, #32363b);
 }
 /* 载入动画*/
 .loading {
@@ -542,7 +542,7 @@
 }
 #dowebok .section6 {
   position: relative;
-  background: url("../image/flame_25.jpg") no-repeat fixed;
+  background: url("../image/testimonial-bg.jpg") no-repeat fixed;
   background-size: cover;
 }
 #dowebok .section6 h2 {
