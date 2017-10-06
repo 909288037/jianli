@@ -102,8 +102,8 @@
 .header .font-icon .font-icon-wrap .font-icon-down {
   color: #f4d03f;
   display: block;
-  font-size: 22px;
-  margin-top: -7px;
+  font-size: 20px;
+  margin-top: -4px;
 }
 .first.current .myResume-warp {
   -webkit-transition: all 1s;
@@ -125,16 +125,10 @@
 }
 @keyframes iconDown {
   0% {
-    font-size: 22px;
-  }
-  25% {
-    font-size: 24px;
-  }
-  50% {
-    font-size: 26px;
+    font-size: 20px;
   }
   100% {
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 #dowebok .section2 {
